@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        .black{
+            background-color: black;
+        }
+    </style>
 </head>
 <body class="w-screen h-screen">
-    <div></div>
+    <div class="w-full h-[15%] bg-green-500 flex-col text-center">
+        <div class="text-white text-2xl pt-5">Welcome to Your Website Task</div>
+        <div class="flex text justify-center space-x-10 pt-5 text-white">
+            <div>Home</div>
+            <div>About</div>
+            <div>Contact</div>
+        </div>
+    </div>
+    <div class="w-full h-[30%] mt-10 flex justify-between">
+        <div class="bg-stone-50 h-[60%] ml-10 max-w-xl rounded-md drop-shadow-md">
+            <div class="text-green-500 mt-3 ml-5">About us</div>
+            <div class="mt-7 ml-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, repudiandae.</div>
+        </div>
+        <div class="bg-stone-50 h-[60%] ml-20 mr-10 max-w-xl rounded-md drop-shadow-md">
+            <div class="text-green-500 mt-3 ml-5">Box Model</div>
+            <div class="mt-7 ml-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil laudantium rerum quidem consequuntur enim. Quibusdam!</div>
+        </div>
+    </div>
+    <div class="w-full h-[30%] mt-10 flex justify-between">
+        <div class="bg-stone-50 h-[60%] ml-10 max-w-xl rounded-md drop-shadow-md">
+            <div class="text-green-500 mt-3 ml-5">About us</div>
+            <div class="mt-7 ml-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, repudiandae.</div>
+        </div>
+    </div>
+    <div class="black w-full bg-black-500 h-20">
+        <div class="text-white text-xl flex text-center">Create by Rudrapratap Singh Jat Follow us on</div>
+    </div>
 </body>
 </html>
