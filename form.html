@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css">
+        .form{
+            background-color: rgb(213, 249, 249);
+            margin-top: 0;
+        }
+        form{
+            background-color: aqua;
+            padding: 5px;
+            font-size: 20px;
+        }
+        fieldset{
+            background-image: url(https://cdn.pixabay.com/photo/2018/04/09/14/33/abstract-3304213_640.png);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        body{
+            padding: 5px;
+            
+            background-image: url(https://wallpaperaccess.com/full/334698.jpg);
+        }
+        body h1{
+            color: floralwhite;
+            font-size: 40px;
+        }
+        form input{
+            border: 2px solid black;
+            font-size: 15px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: floralwhite;
+            background-color: #333;
+            padding: 10px 20px;
+            gap: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        Home
+        Contact Us
+        About Us
+    </div>
+    <h1 align="center">Application Form</h1>
+    <form class="form" action="">
+    <fieldset>
+        <legend>Application Form</legend>
+        1. Name: <input type="text"><br><br>
+        2. Email: <input type="email"><br><br>
+        3. Password: <input type="password"><br><br>
+        4. Phone no.: <input type="number"><br><br>
+        5. Date: <input type="date"><br><br>
+        6. DOB.: <input type="datetime-local"><br><br>
+        7.Gender: <br>
+        Male <input type="radio">
+        Female <input type="radio"><br><br>
+        8. Hobbies: <br>
+        I. Cricket <input type="checkbox"><br>
+        II. Singing <input type="checkbox"><br>
+        III. Dance <input type="checkbox"><br><br>
+        9. Country:
+        <select name="" id="">
+            <option value="India">India</option>
+            <option value="India">Japan</option>
+            <option value="India">Zurich</option>
+            <option value="India">Texas</option>
+        </select><br><br>
+        10. Qualification: 
+        <select name="" id="">
+            <option value="high-school">High School</option>
+            <option value="high-school">Undergraduate</option>
+            <option value="high-school">Postgraduate</option>
+            <option value="high-school">Phd</option>
+        </select>
+    </fieldset>
+    </form>
+</body>
+</html>
