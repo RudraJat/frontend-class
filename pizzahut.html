@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
-<body>
-    
+<body class="h-screen w-screen">
+    <nav class="">
+        <div class="container mx-auto flex space-x-6 justify-between items-center h-20">
+            <div class="flex">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJHubJ28H0z3BpN7q-Bb8S5NbawUUpnTkbyA&s" alt="">
+            </div>
+            <div class="mr-8">
+                <div>Sign in</div>
+            </div>
+        </div>
+    </nav>
+    <div class="container h-full w-full">
+        <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/buy-1-get-3-free1.fd80f3d1573dc919384bc273a4825f82.1.jpg" class="w-[100%] h-[67%] bg-cover bg-center" alt="">
+    </div>
+    <div  class="w-[30%] h-[25%] border-1 absolute top-[72%] left-[35%] space-y-4">
+        <div class="bg-violet-200 h-[30%] container flex  ">
+            <div class="w-[50%] h-full items-center border-1">
+                <div><i class="fa-solid fa-motorcycle"></i> Delivery</div>
+            </div>
+            <div class="w-[50%] h-full items-center border-1">
+                <div><i class="fa-solid fa-utensils"></i> Dine In</div>
+            </div>
+        </div>
+        <div>
+            <h1>Find your nearest Hut</h1>
+            <p>Enter your address to see your local deals, coupons and offers.</p>
+            <input type="text" value="" placeholder="Enter your address"><br>
+            <button>Find nearest Loaction</button>
+        </div>
+    </div>
 </body>
 </html>
