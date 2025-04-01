@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="container mx-auto overflow-hidden min-h-[100vh] w-[100%] flex items-center flex-col">
+        <nav class="flex justify-center gap-4 font-bold items-center p-6 h-[14vh] w-full bg-green-100 text-black underline">
+            <p>Home</p>
+            <p>About</p>
+            <p id="contact">Contact Us</p>
+        </nav>
+        <form id="form" class="flex justify-center items-center p-6 h-[30vh] w-[50%] text-black flex-col border-2 border-black rounded-md hidden">
+            <div class="flex flex-col justify-center items-center p-6 h-[80%] w-[100%] text-black gap-4">
+                <p class="text-lg">Name</p>
+                <input type="text" class="w-[30%] h-[70%] text-black rounded-md border-2 border-black p-2 " />
+                
+            </div>
+            <button class="bg-green-100 w-[30%] h-[40%] text-black p-2 rounded-md border">Submit</button>
+        </form>
+        <div class="flex justify-center items-center p-6 h-[50vh] w-full text-black mt-10">
+            <img class="w-[60%] h-[120%] rounded-md" src="https://cdn.vectorstock.com/i/500p/31/26/an-anime-redhead-with-a-camera-vector-47563126.jpg" alt="">
+            <p class="w-[70%] h-[100%] rounded-md p-9">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vel optio in officiis, praesentium obcaecati placeat vero aperiam consequatur, quis asperiores. Incidunt aliquid qui deleniti nostrum commodi, at officia quasi nobis deserunt adipisci voluptatum quod doloribus provident in aperiam tempora rerum veniam nam, sit et. Sequi ad accusamus qui, recusandae nobis culpa dolorem autem a aliquam, fugiat maiores voluptatum pariatur amet quis! Aut facilis, placeat nam dolores, modi reprehenderit, nobis omnis voluptate eum est porro ipsum? Eligendi nisi quam unde accusantium voluptatum sit similique, ipsam soluta distinctio? Autem deleniti dolorem eveniet labore eum ut vitae natus tempore dolores. Exercitationem, soluta.</p>
+        </div>
+        <div class="flex items-center justify-center gap-4 border mt-8 h-[10vh]">
+            <p class="w-[20%] h-[100%] text-black flex items-center justify-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore?</p>
+            <p class="w-[20%] h-[100%] text-black flex items-center justify-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore?</p>
+            <p class="w-[20%] h-[100%] text-black flex items-center justify-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore?</p>
+            <p class="w-[20%] h-[100%] text-black flex items-center justify-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, labore?</p>
+        </div>
+    </div>
+    <script>
+        const contact = document.getElementById('contact');
+        const form = document.getElementById('form');
+        contact.addEventListener('click', () => {
+            if(form.classList.contains('hidden')){
+                form.classList.remove('hidden');
+            }else{
+                form.classList.add('hidden');
+            }
+        });
+    </script>
+  </body>
+</html>
