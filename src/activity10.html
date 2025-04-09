@@ -12,10 +12,15 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f3f4f6;
+            background-color: rgb(115, 115, 157);
         }
         .timer-container {
             text-align: center;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            position: relative;
         }
         .timer {
             font-size: 3rem;
@@ -37,6 +42,19 @@
             background-color: #2196f3;
             color: white;
         }
+        .time-over {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: default;
+        }
     </style>
 </head>
 <body>
@@ -46,6 +64,7 @@
         <div class="timer" id="timer">00:00</div>
         <button class="start" onclick="startCountdown()">Start</button>
         <button class="reset" onclick="resetCountdown()">Reset</button>
+        <button class="time-over" id="timeOverButton">Time is Over</button>
     </div>
 
     <script>
@@ -63,13 +82,14 @@
             updateTimerDisplay();
 
             clearInterval(countdown); // Clear any existing countdown
+            document.getElementById('timeOverButton').style.display = 'none'; // Hide "Time is Over" button
             countdown = setInterval(() => {
                 timeRemaining--;
                 updateTimerDisplay();
 
                 if (timeRemaining <= 0) {
                     clearInterval(countdown);
-                    alert("Time's up!");
+                    document.getElementById('timeOverButton').style.display = 'block'; // Show "Time is Over" button
                 }
             }, 1000);
         }
@@ -79,6 +99,7 @@
             timeRemaining = 0;
             document.getElementById('timeInput').value = '';
             updateTimerDisplay();
+            document.getElementById('timeOverButton').style.display = 'none'; // Hide "Time is Over" button
         }
 
         function updateTimerDisplay() {
