@@ -6,19 +6,30 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <div class=" bg-amber-100 border rounded-xl mt-6 p-6 max-w-sm mx-auto hover:shadow-2xl transition duration-500 shadow-black-900">
+  <div class=" bg-amber-100 border rounded-xl mt-6 p-6 max-w-sm mx-auto hover:shadow-2xl  shadow-black-900">
     <div>
-        <img src="https://i.etsystatic.com/11463421/r/il/2007e2/3546997770/il_fullxfull.3546997770_6da9.jpg" alt="">
+        <a href="https://www.amazon.com">
+            <img src="https://i.etsystatic.com/11463421/r/il/2007e2/3546997770/il_fullxfull.3546997770_6da9.jpg" alt="">
+        </a>
     </div>
     <div>
         <div class="flex justify-between items-center mt-4">
-            <div>
+            <div class="hover:text-rose-500">
                 <h1 class="">Baby clothes</h1>
                 <p class="">Cotton fabric</p>
             </div>
-            <button class="border bg-blue-300 rounded-3xl p-2 hover:bg-rose-300">Add To Cart</button>
+            <div>
+
+                <button id="btn" class="border bg-blue-300 rounded-3xl p-2 hover:bg-rose-300" >Add To Cart</button>
+            </div>
         </div>
     </div>
   </div>
+  <script>
+    const btn=document.getElementById('btn');
+    btn.addEventListener('click',function(){
+        alert("Added to cart");
+    });
+  </script>
 </body>
 </html>
