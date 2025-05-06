@@ -31,22 +31,27 @@
         alert("Added to cart");
         const limit=100;
         console.log("Prime numbers upto "+limit+" are: ");
-        for(let i=2;i<=limit;i++){
-            if(isPrime(i)){
+        for(let i=1;i<=limit;i++){
+            if(isEven(i)){
                 console.log(i);
             }
         }
     });
-    function isPrime(num){
-        if(num<2){
+    function isEven(num){
+        // if(num<2){
+        //     return false;
+        // }
+        // for(let i=2;i<=num;i++){
+        //     if(i%2===0){
+        //         return false;
+        //     }
+        // }
+        // return true;
+        if(num%2===0){
+            return true;
+        }else{  
             return false;
         }
-        for(let i=2;i<=Math.sqrt(num);i++){
-            if(num%i===0){
-                return false;
-            }
-        }
-        return true;
     }
   </script>
 </body>
