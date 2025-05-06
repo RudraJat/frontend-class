@@ -29,7 +29,25 @@
     const btn=document.getElementById('btn');
     btn.addEventListener('click',function(){
         alert("Added to cart");
+        const limit=100;
+        console.log("Prime numbers upto "+limit+" are: ");
+        for(let i=2;i<=limit;i++){
+            if(isPrime(i)){
+                console.log(i);
+            }
+        }
     });
+    function isPrime(num){
+        if(num<2){
+            return false;
+        }
+        for(let i=2;i<=Math.sqrt(num);i++){
+            if(num%i===0){
+                return false;
+            }
+        }
+        return true;
+    }
   </script>
 </body>
 </html>
