@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet"> 
+    <script src="jquery.min.js"></script>
+</head>
+<body class="h-screen bg-gray-300">
+    <div class="flex justify-center space-x-2 ">
+        <button id="hide" class="border-2 p-2 mt-10">Hide</button>
+        <button id="show" class="border-2 p-2 mt-10">Show</button>
+        <button id="toggle" class="border-2 p-2 mt-10">Toggle</button>
+        <button id="chng" class="border-2 p-2 mt-10">Change text</button>
+        <button id="txchng" class="border-2 p-2 mt-10">Change text-color</button>
+        <button id="bgchng" class="border-2 p-2 mt-10">Change bg-color</button>
+    </div>
+    <div class="justify-center flex ">
+        <p id ="text">hello i am visible </p>
+        <p id ="text1">toggling</p>
+    </div>
+    <form class="bg-white">
+        <label for="Name" class="text-bold">Name</label>
+        <input type="text" id="text3" class="text-indigo-300" placeholder="Enter your name: ">
+        <button id="submit" class="border-2 p-2">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $('#submit').click(function(){  
+                let username=$("#text3").val();
+                alert("Hello "+username+"!!!");
+            });
+            $('#show').click(function(){
+                $('#text').show();
+            });
+            $('#hide').click(function(){
+                $('#text').hide();
+            });
+            $('#toggle').click(function(){
+                $('#text1').toggle();
+            });
+            $('#chng').click(function(){
+                $('#text1').text("rudra");
+            });
+            $('#txchng').click(function(){
+                $('#text1').css('color','blue');
+            });
+            $('#bgchng').click(function(){
+                $('body').css("background-color", "yellow")
+            });
+        });
+    </script>
+</body>
+</html>
