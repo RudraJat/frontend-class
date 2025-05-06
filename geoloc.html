@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="./output.css">
+</head>
+<body>
+    <div class="flex justify-center items-center h-screen gap-5 ">
+        <button class="border-2 bg-blue-300 hover:bg-rose-500 p-1 " id="btn">Get My Location</button>
+        <div id="output" class="output"></div>
+    </div>
+    <script>
+        const btn=document.getElementById('btn');
+        btn.addEventListener('click',function(){
+            const output=document.getElementById('output');
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(
+                    (position)=>{
+                        const lat=position.coords.latitude;
+                        const long=position.coords.longitude;
+                        output.innerHTML=`
+                        <p><b>Latitude: <b>${lat}</p>
+                        <p><b>Longitude: <b>${long}</p>
+                        `;
+                    }
+                )
+            }else{
+                output.innerHTML=`<p>Geolocation is not supported by this browser.</p>`;
+            }
+        });
+    </script>
+</body>
+</html>
